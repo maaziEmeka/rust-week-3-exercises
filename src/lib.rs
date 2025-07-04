@@ -31,7 +31,7 @@ impl CompactSize {
                 let mut bytes = vec![0xFD];
                 bytes.extend_from_slice(&(self.value as u16).to_le_bytes());
                 bytes
-    }
+            }
             0x10000..=0xFFFFFFFF => {
                 let mut bytes = vec![0xFE];
                 bytes.extend_from_slice(&(self.value as u32).to_le_bytes());
